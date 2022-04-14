@@ -1,0 +1,41 @@
+2022-04-13 13:02:09 -  - exec CUpdateClientPartner::SearchModulesEx
+2022-04-13 13:02:09 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:02:09 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=bitrix-edu.loc&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=D&CLIENT_PHPVER=7.4.21&NGINX=Y&dbv=5.7.33&instm=main%2C21.400.100%2CY%3Bb24connector%2C21.0.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bbitrixcloud%2C21.0.0%2CN%3Bclouds%2C21.100.0%2CN%3Bfileman%2C21.200.0%2CN%3Bhighloadblock%2C21.100.0%2CN%3Biblock%2C21.400.100%2CN%3Blanding%2C21.300.300%2CN%3Bmessageservice%2C21.100.0%2CN%3Bperfmon%2C21.0.0%2CN%3Brest%2C21.200.0%2CN%3Bsearch%2C21.0.100%2CN%3Bseo%2C21.300.0%2CN%3Bsocialservices%2C21.100.0%2CN%3Btranslate%2C21.100.0%2CN%3Bui%2C21.300.0%2CN&search_module_id=&search_module=&search_category=7%2C14&search_type=&search_order=DESC&search_order_by=SORT&search_page=1&SUPD_SRS=RU&SUPD_CMP=N
+2022-04-13 13:02:09 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:02:10 -  - TIME SearchModulesEx(request) 1.182 sec
+2022-04-13 13:02:10 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:02:19 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2022-04-13 13:02:19 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:02:19 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=bitrix-edu.loc&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=D&CLIENT_PHPVER=7.4.21&NGINX=Y&dbv=5.7.33&instm=main%2C21.400.100%2CY%3Bb24connector%2C21.0.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bbitrixcloud%2C21.0.0%2CN%3Bclouds%2C21.100.0%2CN%3Bfileman%2C21.200.0%2CN%3Bhighloadblock%2C21.100.0%2CN%3Biblock%2C21.400.100%2CN%3Blanding%2C21.300.300%2CN%3Bmessageservice%2C21.100.0%2CN%3Bperfmon%2C21.0.0%2CN%3Brest%2C21.200.0%2CN%3Bsearch%2C21.0.100%2CN%3Bseo%2C21.300.0%2CN%3Bsocialservices%2C21.100.0%2CN%3Btranslate%2C21.100.0%2CN%3Bui%2C21.300.0%2CN&reqm=nsandrey.emptyinstall&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2022-04-13 13:02:19 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:02:20 -  - TIME LoadModulesUpdates(request) 0.251 sec
+2022-04-13 13:02:20 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:02:20 - S - STEP
+2022-04-13 13:02:20 - LM4W01 - loadModule4Wizard-Step
+2022-04-13 13:02:20 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2022-04-13 13:02:20 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:02:20 -  - loadFile
+2022-04-13 13:02:20 - U - RETURN
+2022-04-13 13:02:20 -  - exec CUpdateClientPartner::UnGzipArchive
+2022-04-13 13:02:20 -  - TIME UnGzipArchive 0.243 sec
+2022-04-13 13:02:21 -  - TIME UpdateStepModules 0.201 sec
+2022-04-13 13:02:21 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2022-04-13 13:02:21 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:02:21 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=bitrix-edu.loc&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=D&CLIENT_PHPVER=7.4.21&NGINX=Y&dbv=5.7.33&instm=main%2C21.400.100%2CY%3Bb24connector%2C21.0.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bbitrixcloud%2C21.0.0%2CN%3Bclouds%2C21.100.0%2CN%3Bfileman%2C21.200.0%2CN%3Bhighloadblock%2C21.100.0%2CN%3Biblock%2C21.400.100%2CN%3Blanding%2C21.300.300%2CN%3Bmessageservice%2C21.100.0%2CN%3Bnsandrey.emptyinstall%2C1.0.5%2CN%3Bperfmon%2C21.0.0%2CN%3Brest%2C21.200.0%2CN%3Bsearch%2C21.0.100%2CN%3Bseo%2C21.300.0%2CN%3Bsocialservices%2C21.100.0%2CN%3Btranslate%2C21.100.0%2CN%3Bui%2C21.300.0%2CN&reqm=nsandrey.emptyinstall&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2022-04-13 13:02:21 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:02:21 -  - TIME LoadModulesUpdates(request) 0.246 sec
+2022-04-13 13:02:21 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:02:21 - STEP - Finish - NOUPDATES
+2022-04-13 13:02:21 - LM4W03 - Finish - NOUPDATES
+2022-04-13 13:03:10 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:03:10 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::GetUpdatesList
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:03:11 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=bitrix-edu.loc&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=D&CLIENT_PHPVER=7.4.21&NGINX=Y&dbv=5.7.33&instm=main%2C21.400.100%2CY%3Bb24connector%2C21.0.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bbitrixcloud%2C21.0.0%2CN%3Bclouds%2C21.100.0%2CN%3Bfileman%2C21.200.0%2CN%3Bhighloadblock%2C21.100.0%2CN%3Biblock%2C21.400.100%2CN%3Blanding%2C21.300.300%2CN%3Bmessageservice%2C21.100.0%2CN%3Bnsandrey.emptyinstall%2C1.0.5%2CN%3Bperfmon%2C21.0.0%2CN%3Brest%2C21.200.0%2CN%3Bsearch%2C21.0.100%2CN%3Bseo%2C21.300.0%2CN%3Bsocialservices%2C21.100.0%2CN%3Btranslate%2C21.100.0%2CN%3Bui%2C21.300.0%2CN&reqm=bitrix.sitecorporate%2Cnsandrey.emptyinstall&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:03:11 -  - TIME GetUpdatesList(request) 0.274 sec
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::ParseServerData
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::__CollectRequestData
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::GetHTTPPage
+2022-04-13 13:03:11 -  - exec CUpdateClientPartner::ParseServerData
