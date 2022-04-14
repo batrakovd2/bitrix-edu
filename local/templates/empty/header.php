@@ -66,7 +66,13 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
                         <div class="row">
                             <div class="col-lg-7 col-xs-12 hidden-xs">
                                 <ul class="btn-list-inline">
-                                    Самый лучший производитель одежды
+                                    <?$APPLICATION->IncludeFile(
+                                            SITE_DIR."include/slogan.php",
+                                            array(),
+                                            array(
+                                                    "MODE" => "text"
+                                            )
+                                    );?>
                                 </ul>
                             </div>
                             <div class="col-lg-5 col-xs-12 hidden-print">
@@ -79,8 +85,24 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <ul class="phone-list">
-                            <li><i>+7 (495)</i> <b>000-00-00</b></li>
-                            <li><i>+7 (8442)</i> <b>00-00-00</b></li>
+                            <li>
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/phone1.php",
+                                    array(),
+                                    array(
+                                        "MODE" => "html"
+                                    )
+                                );?>
+                            </li>
+                            <li>
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/phone1.php",
+                                    array(),
+                                    array(
+                                        "MODE" => "html"
+                                    )
+                                );?>
+                            </li>
                         </ul>
                     </div>
                 </div>
