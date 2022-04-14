@@ -294,16 +294,23 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
             </div>
         </div>
     <?endif;?>
+
+    <?if(ERROR_404 == 'Y'):?>
+    <div class="page-not-found">
+    <?else:?>
     <div class="container">
         <?if(!$bIsMainPage):?>
-        <ol class="breadcrumb">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Раздел</a></li>
-            <li class="active">Детальная страница</li>
-        </ol>
+            <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+                "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+            ),
+                false
+            );?>
         <h1><?$APPLICATION->ShowTitle(false);?></h1>
         <?endif;?>
     </div>
+    <?endif;?>
     <div class="container">
 
 						

@@ -6,8 +6,12 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <?//  $asset->addJs(SITE_TEMPLATE_PATH.'/js/main.js') ?>
 <!--	</body>-->
 <!--</html>-->
+<?if(ERROR_404 == 'Y'):?>
+    </div>
+<? else: ?>
+    <div class="sticky-push"></div>
+<? endif; ?>
 
-<div class="sticky-push"></div>
 </div>
 
 <footer>
