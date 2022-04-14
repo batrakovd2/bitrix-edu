@@ -109,32 +109,23 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
             </div>
         </div>
     </header>
-    <nav>
-        <div class="navbar navbar-intervolga">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
-                        <span class="sr-only">Переключить навигацию</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">InterVolga.ru</a>
-                </div>
-                <div class="collapse navbar-collapse" id="top-nav">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Главная страница</a></li>
-                        <li><a href="#">Каталог товаров</a></li>
-                        <li><a href="#">Новости компании</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Дилерам</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:menu",
+        "menu",
+        Array(
+            "ALLOW_MULTI_SELECT" => "N",
+            "CHILD_MENU_TYPE" => "left",
+            "COMPONENT_TEMPLATE" => ".default",
+            "DELAY" => "N",
+            "MAX_LEVEL" => "1",
+            "MENU_CACHE_GET_VARS" => "",
+            "MENU_CACHE_TIME" => "3600",
+            "MENU_CACHE_TYPE" => "N",
+            "MENU_CACHE_USE_GROUPS" => "Y",
+            "ROOT_MENU_TYPE" => "top",
+            "USE_EXT" => "N"
+        )
+    );?>
     <?if($bIsMainPage):?>
         <div class="slider-responsive">
             <div class="slider-responsive-panel">
