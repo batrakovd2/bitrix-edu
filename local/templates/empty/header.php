@@ -127,66 +127,69 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
         )
     );?>
     <?if($bIsMainPage):?>
-        <div class="slider-responsive">
-            <div class="slider-responsive-panel">
-                <input data-toggle="radio-switch" type="checkbox">
-                <span>Наши лучшие предложения Вам</span>
-            </div>
-            <div class="toggle-height">
-                <div class="slider-responsive-controls">
-                    <a class="hidden-xs" href="#prev"></a>
-                    <a class="hidden-xs" href="#next"></a>
-                </div>
-                <div class="slider-responsive-inner">
-
-
-                    <div class="slider-responsive-inner-item active">
-                        <div class="slider-responsive-inner-item-img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/slider-main/1.jpg')">
-                            <div class="slider-responsive-inner-item-img-title">
-                                <div class="h2">Одежда для велосипедистов</div>
-                                <div>В следующем году наша компания начинает коллекции одежды для велосипедистов. Не пропустите!</div>
-                                <a href="#" class="link">Подробнее...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-responsive-inner-item">
-                        <div class="slider-responsive-inner-item-img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/slider-main/2.jpg')">
-                            <div class="slider-responsive-inner-item-img-title">
-                                <div class="h2">Одежда для бега</div>
-                                <div>Новая коллекция спортивной одежды для бега</div>
-                                <a href="#" class="link">Подробнее...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-responsive-inner-item">
-                        <div class="slider-responsive-inner-item-img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/slider-main/3.jpg')">
-                            <div class="slider-responsive-inner-item-img-title">
-                                <div class="h2">Ценопад! Успейте купить на этой неделе!</div>
-                                <div>Наступила осень. Желтеют и опадают листья, навевая уныние и тоску о закончившемся лете. Раскрасьте хмурые будни, спешите на осеннюю акцию Ценопад! Лучшие цены осени, только качественные товары!</div>
-                                <a href="#" class="link">Подробнее...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-responsive-inner-item">
-                        <div class="slider-responsive-inner-item-img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/slider-main/4.jpg')">
-                            <div class="slider-responsive-inner-item-img-title">
-                                <div class="h2">Новая коллекция нижнего белья</div>
-                                <div>Девочки, спешите! Новое поступление красивейшего нижнего белья. Первым 100 оптовым покупателям - скидка 10%! Отличное качество, известные бренды. В наличии весь размерный ряд.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-responsive-inner-item">
-                        <div class="slider-responsive-inner-item-img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/slider-main/5.jpg')">
-                            <div class="slider-responsive-inner-item-img-title">
-                                <div class="h2">Гимнастические купальники</div>
-                                <div>Все для занятия гимнастикой в нашем ассортименте</div>
-                                <a href="#" class="link">Подробнее...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?$APPLICATION->IncludeComponent("bitrix:news.list", "slider", Array(
+            "COMPONENT_TEMPLATE" => ".default",
+            "IBLOCK_TYPE" => "index",	// Тип информационного блока (используется только для проверки)
+            "IBLOCK_ID" => "1",	// Код информационного блока
+            "NEWS_COUNT" => "50",	// Количество новостей на странице
+            "SORT_BY1" => "SORT",	// Поле для первой сортировки новостей
+            "SORT_ORDER1" => "ASC",	// Направление для первой сортировки новостей
+            "SORT_BY2" => "TIMESTAMP_X",	// Поле для второй сортировки новостей
+            "SORT_ORDER2" => "DESC",	// Направление для второй сортировки новостей
+            "FILTER_NAME" => "",	// Фильтр
+            "FIELD_CODE" => array(	// Поля
+                0 => "PREVIEW_PICTURE",
+                1 => "",
+                2 => "",
+            ),
+            "PROPERTY_CODE" => array(	// Свойства
+                0 => "url",
+                1 => "",
+            ),
+            "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+            "DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+            "AJAX_MODE" => "N",	// Включить режим AJAX
+            "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+            "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+            "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+            "CACHE_TYPE" => "A",	// Тип кеширования
+            "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+            "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+            "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+            "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+            "SET_TITLE" => "N",	// Устанавливать заголовок страницы
+            "SET_BROWSER_TITLE" => "N",	// Устанавливать заголовок окна браузера
+            "SET_META_KEYWORDS" => "N",	// Устанавливать ключевые слова страницы
+            "SET_META_DESCRIPTION" => "N",	// Устанавливать описание страницы
+            "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
+            "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+            "PARENT_SECTION" => "",	// ID раздела
+            "PARENT_SECTION_CODE" => "",	// Код раздела
+            "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела
+            "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+            "DISPLAY_DATE" => "N",	// Выводить дату элемента
+            "DISPLAY_NAME" => "Y",	// Выводить название элемента
+            "DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+            "DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
+            "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+            "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+            "DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+            "PAGER_TITLE" => "Новости",	// Название категорий
+            "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+            "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+            "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+            "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+            "SET_STATUS_404" => "N",	// Устанавливать статус 404
+            "SHOW_404" => "N",	// Показ специальной страницы
+            "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+        ),
+            false
+        );?>
 
         <div class="activities-description-wrap">
             <div class="activities-description">
